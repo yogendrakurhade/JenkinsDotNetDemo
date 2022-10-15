@@ -3,7 +3,7 @@ pipeline{
   stages{
     stage('Restore packages') {
       steps {
-        bat "dotnet restore ${workspace}\\JenkinsDotNetDemo.sln"
+        bat "dotnet restore ${my-pipeline_master}\\JenkinsDotNetDemo.sln"
       }
     }
   }
