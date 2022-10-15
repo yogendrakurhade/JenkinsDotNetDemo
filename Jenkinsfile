@@ -1,9 +1,9 @@
 pipeline{
   agent any
   stages{
-    stage("build"){
-      steps{
-      
+    stage('Restore packages') {
+      steps {
+        bat "dotnet restore ${workspace}\\JenkinsDotNetDemo\\JenkinsDotNetDemo.sln"
       }
     }
   }
